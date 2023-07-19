@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutte_aplikasi_pendaftaran_kkn_kkp/Shared/theme.dart';
 
-class Judul extends StatefulWidget {
-  // final String nama;
+class Judul extends StatelessWidget {
+  final String nama;
 
   const Judul({
     Key? key,
-    // required this.mahasiswa,
+    required this.nama,
   }) : super(key: key);
 
-  @override
-  State<Judul> createState() => _JudulState();
-}
-
-class _JudulState extends State<Judul> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,7 +34,7 @@ class _JudulState extends State<Judul> {
             ),
           ),
           Text(
-            'Nama Mahasiswa Login',
+            nama,
             style: blackTextStyle.copyWith(
               fontSize: 18,
               fontWeight: black,

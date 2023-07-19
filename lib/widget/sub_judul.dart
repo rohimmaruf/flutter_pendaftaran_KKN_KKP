@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutte_aplikasi_pendaftaran_kkn_kkp/Shared/theme.dart';
 
-class SubJudul extends StatefulWidget {
-  const SubJudul({super.key});
+class SubJudul extends StatelessWidget {
+  final String judul;
+  final String subjudul;
+  final String nim;
 
-  @override
-  State<SubJudul> createState() => _SubJudulState();
-}
 
-class _SubJudulState extends State<SubJudul> {
+  const SubJudul({
+    Key? key,
+    required this.subjudul,
+    required this.judul,
+    required this.nim,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,7 +34,7 @@ class _SubJudulState extends State<SubJudul> {
               Column(
                 children: [
                   Text(
-                    'Prodi ',
+                    judul,
                     style: blackTextStyle.copyWith(
                       fontSize: 14,
                       fontWeight: black,
@@ -40,7 +44,7 @@ class _SubJudulState extends State<SubJudul> {
                     height: 8,
                   ),
                   Text(
-                    'Jurusan',
+                    subjudul,
                     // jurusan,
                     style: greyTextStyle.copyWith(
                       fontSize: 14,

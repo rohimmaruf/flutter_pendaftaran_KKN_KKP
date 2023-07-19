@@ -26,14 +26,20 @@ class _PilihanState extends State<Pilihan> {
           const SizedBox(
             height: 20,
           ),
-          const CustomFilledButton(
+          CustomFilledButton(
             tittle: 'Dospem',
+            onPressed: (){              
+            Navigator.pushNamed(context, '/home-dospem');
+},
           ),
           const SizedBox(
             height: 20,
           ),
-          const CustomFilledButton(
+          CustomFilledButton(
             tittle: 'Kaprodi',
+            onPressed: (){              
+            Navigator.pushNamed(context, '/home-kprodi');
+},
           ),
         ],
       ),

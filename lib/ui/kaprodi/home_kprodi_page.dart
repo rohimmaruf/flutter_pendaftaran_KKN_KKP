@@ -4,24 +4,26 @@ import 'package:flutte_aplikasi_pendaftaran_kkn_kkp/widget/sub_judul.dart';
 import 'package:flutte_aplikasi_pendaftaran_kkn_kkp/Shared/theme.dart';
 import 'package:flutter/material.dart';
 
-class HomeMahasiswa extends StatefulWidget {
-  const HomeMahasiswa({super.key});
+class HomeKprodi extends StatefulWidget {
+  const HomeKprodi({super.key});
 
   @override
-  State<HomeMahasiswa> createState() => _HomeMahasiswaState();
+  State<HomeKprodi> createState() => _HomeKprodiState();
 }
 
-class _HomeMahasiswaState extends State<HomeMahasiswa> {
+class _HomeKprodiState extends State<HomeKprodi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
         children: [
-          const Judul(nama: 'Nama Mahasiswa',),
-          const SubJudul(
-            judul: "Selamat Datang",
-            subjudul: "Jurusan yang dipilih",
-            nim: "1110110050",
+          Judul(
+            nama: 'Nama Kaprodi',
+            ),
+          SubJudul(
+            judul: 'Buatkan Akun',
+            subjudul:'Serta Rekap Nilai',
+            nim:'1119110050'
           ),
           Container(
             margin: const EdgeInsets.symmetric(
@@ -38,33 +40,34 @@ class _HomeMahasiswaState extends State<HomeMahasiswa> {
           Row(
             children: [
               ListMenu(
-                deskripsi: 'Data \nDiri',
+                deskripsi: 'Buatkan \n Akun',
                 icon: 'assets/logo_data_diri.png',
                 onTap: () {
-                  Navigator.pushNamed(context, '/data-diri-mahasiswa',);
+                  Navigator.pushNamed(context, '/mahasiswa-konsultasi',);
                 },
               ),
               ListMenu(
-                deskripsi: 'Daftar \n KKN',
+                deskripsi: 'Mahasiswa \n KKN & KKP',
                 icon: 'assets/logo_data_diri.png',
                 onTap: () {
-                  Navigator.pushNamed(context, '/daftar-kkn',);
+                  Navigator.pushNamed(context, '/mahasiswa-kkn-kkp',);
                 },
               ),
               ListMenu(
-                deskripsi: 'Daftar \n KKP',
+                deskripsi: 'Pilih \n Dosen',
                 icon: 'assets/logo_report.png',
                 onTap: () {
-                  Navigator.pushNamed(context, '/daftar-kkp',);
+                  Navigator.pushNamed(context, '/beri-nilai',);
                 },
               ),
               ListMenu(
-                deskripsi: 'Upload \n Laporan',
-                icon: 'assets/logo_upload.png',
+                deskripsi: 'Rekap \n Nilai',
+                icon: 'assets/logo_report.png',
                 onTap: () {
-                  Navigator.pushNamed(context, '/upload-laporan',);
+                  Navigator.pushNamed(context, '/beri-nilai',);
                 },
               ),
+              
             ],
           ),
           Image.asset('assets/logo_konsultasi.png'),
